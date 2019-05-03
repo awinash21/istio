@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: abort
+spec:
+  hosts:
+  - serverservice
+  http:
+  - fault:
+      abort:
+        percent: 100
+        httpStatus: 500
+    route:
+    - destination:
+        host: serverservice
+        subset: v1
