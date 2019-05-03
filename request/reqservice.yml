@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: requestservice
+  labels:
+    name: requestservice
+    app: talk
+spec:
+  ports:
+  - port: 8000
+    name: http
+    targetPort: 8000
+  type: LoadBalancer
+  selector:
+     name: requestpod
+     app: talk
