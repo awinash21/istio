@@ -1,9 +1,9 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
-  name: requestservice1
+  name: requestservice
 spec:
-  host: requestservice1
+  host: requestservice
   trafficPolicy:
     connectionPool:
       tcp:
