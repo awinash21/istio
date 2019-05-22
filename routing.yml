@@ -10,8 +10,8 @@ spec:
     - destination:
         host: serverservice
         subset: v1
-      weight: 25
+      weight: 100
     - destination:
         host: serverservice
         subset: v2
-      weight: 75
+      weight: 0
